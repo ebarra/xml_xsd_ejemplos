@@ -1,0 +1,7 @@
+<?xml encoding="UTF-8"?>
+<!ELEMENT lista-libros (libro*)>
+<!ELEMENT libro (titulo, autor, editorial, genero?)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT editorial (#PCDATA)>
+<!ELEMENT genero (#PCDATA)>

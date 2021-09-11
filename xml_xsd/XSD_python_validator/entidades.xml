@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entidades>
+   <menor_que>&lt;</menor_que>
+   <mayor_que>&gt;</mayor_que>
+   <comilla_doble>&quot;</comilla_doble>
+   <comilla_simple>&apos;</comilla_simple>
+   <ampersand>&amp;</ampersand>
+</entidades>

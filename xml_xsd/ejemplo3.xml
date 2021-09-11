@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<listado>
+    <persona>
+        <nombre>Juan</nombre>
+        <apellidos>Palomo</apellidos>
+        <fecha>10/10/1980</fecha>
+    </persona>
+    <persona>
+        <nombre>Pepe</nombre>
+        <apellidos>Rodriguez</apellidos>
+        <fecha>10/11/1965</fecha>
+    </persona>
+</listado>
+  

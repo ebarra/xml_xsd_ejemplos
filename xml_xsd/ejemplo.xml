@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<alu:alumno xmlns:alu="http://vortice.es/ns_XML/alumno" 
+            xmlns:asi="http://vortice.es/ns_XML/asignatura">
+    <alu:numero_ID>1232654</alu:numero_ID>
+    <alu:nombre>
+        Adan Perez Gomez
+    </alu:nombre>
+            <alu:telefono>99999999</alu:telefono>
+            <asi:asignatura>
+                <asi:numero_ID>6523213</asi:numero_ID>
+                <asi:nombre>Ingeniería del Software</asi:nombre>
+            </asi:asignatura>
+</alu:alumno>

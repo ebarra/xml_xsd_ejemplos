@@ -1,0 +1,25 @@
+[
+{
+"numero_ID": "1232654",
+"nombre": "Adan Perez Gomez",
+"telefono": "99999999",
+"asignaturas": ["BBDD","BDNR","PROG" ]
+}
+,
+{
+"listado": {
+    "persona": [
+        {
+            "nombre": "Juan",
+            "apellidos": "Palomo",
+            "fecha": "10/10/1980"
+        },
+        {
+            "nombre": "Pepe",
+            "apellidos": "Rodriguez",
+            "fecha": "10/11/1965"
+        }
+    ]
+}
+}
+]

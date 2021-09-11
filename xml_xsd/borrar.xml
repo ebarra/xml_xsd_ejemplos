@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<alumno xmlns="http://vortice.es/ns_XML/alumno" 
+        xmlns:asi="http://vortice.es/ns_XML/asignatura">
+    <numero_ID>1232654</numero_ID>
+    <nombre>Adan Perez Gomez</nombre>
+    <telefono>99999999</telefono>
+    <asi:asignatura>
+        <asi:numero_ID>6523213</asi:numero_ID>
+        <asi:nombre>BBDD</asi:nombre>
+    </asi:asignatura>
+</alumno>

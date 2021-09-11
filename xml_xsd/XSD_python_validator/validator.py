@@ -1,0 +1,19 @@
+from lxml import etree
+
+class Validator:
+    def __init__(self, xsd_path: str):
+        xmlschema_doc = etree.parse(xsd_path)
+        self.xmlschema = etree.XMLSchema(xmlschema_doc)
+
+    #see https://lxml.de/validation.html#xmlschema
+    def validate(self, xml_path: str) -> bool:
+        xml_doc = etree.parse(xml_path)
+        result = self.xmlschema.validate(xml_doc)
+        log = self.xmlschema.error_log
+        print(log.last_error)
+        return result
+
+
+validator = Validator("xml/marcadores.xsd")
+validator.validate("xml/marcadores.xml")
+
