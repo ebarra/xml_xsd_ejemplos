@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <marcadores xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:noNamespaceSchemaLocation="marcadores.xsd">
+xsi:noNamespaceSchemaLocation="xsd/marcadores.xsd">
    <pagina>
       <nombre>Abrirllave</nombre>
       <descripcion>Tutoriales de informática.</descripcion>

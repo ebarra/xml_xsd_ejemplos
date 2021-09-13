@@ -14,6 +14,6 @@ class Validator:
         return result
 
 #descomentar si se ejecuta este archivo directamente en lugar que desde main.py
-#validator = Validator("xml/xsd/marcadores.xsd")
-#validator.validate("xml/marcadores.xml")
+validator = Validator("Main.xsd")
+validator.validate("Purchase.xml")
 

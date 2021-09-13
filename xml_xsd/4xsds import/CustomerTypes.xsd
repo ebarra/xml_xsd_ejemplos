@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Created with Liquid Studio (http://www.liquid-technologies.com) -->
+<xs:schema xmlns:cmn="http://NamespaceTest.com/CommonTypes"
+           targetNamespace="http://NamespaceTest.com/CustomerTypes"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:import schemaLocation="CommonTypes.xsd"
+               namespace="http://NamespaceTest.com/CommonTypes" />
+    <xs:complexType name="CustomerType">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:string" />
+            <xs:element name="DeliveryAddress" type="cmn:AddressType" />
+            <xs:element name="BillingAddress" type="cmn:AddressType" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

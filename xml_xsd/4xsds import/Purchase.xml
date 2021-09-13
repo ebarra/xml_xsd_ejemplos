@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<!-- Created with Liquid Studio (http://www.liquid-technologies.com) -->
+<p:Purchase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://NamespaceTest.com/Purchase Main.xsd"
+            xmlns:p="http://NamespaceTest.com/Purchase"
+            xmlns:o="http://NamespaceTest.com/OrderTypes"
+            xmlns:c="http://NamespaceTest.com/CustomerTypes"
+            xmlns:cmn="http://NamespaceTest.com/CommonTypes">
+    <p:OrderDetail>
+        <o:Item>
+            <o:ProductName>Widget</o:ProductName>
+            <o:Quantity>1</o:Quantity>
+            <o:UnitPrice>3.42</o:UnitPrice>
+        </o:Item>
+    </p:OrderDetail>
+    <p:PaymentMethod>VISA</p:PaymentMethod>
+    <p:CustomerDetails>
+        <c:Name>James</c:Name>
+        <c:DeliveryAddress>
+            <cmn:Line1>15 Some Road</cmn:Line1>
+            <cmn:Line2>SomeTown</cmn:Line2>
+        </c:DeliveryAddress>
+        <c:BillingAddress>
+            <cmn:Line1>15 Some Road</cmn:Line1>
+            <cmn:Line2>SomeTown</cmn:Line2>
+        </c:BillingAddress>
+    </p:CustomerDetails>
+</p:Purchase>  
