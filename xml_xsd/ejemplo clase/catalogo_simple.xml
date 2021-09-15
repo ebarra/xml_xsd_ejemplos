@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<catalogo xmlns="http://upm.es/xmlns/catalogo" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://upm.es/xmlns/catalogo catalogo_simple.xsd" 
+          id="898">
+  <fecha>2021-09-14</fecha>
+</catalogo>

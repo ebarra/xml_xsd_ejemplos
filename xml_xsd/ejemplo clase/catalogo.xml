@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<catalogo xmlns="http://upm.es/xmlns/catalogo" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://upm.es/xmlns/catalogo catalogo.xsd" 
+          id="783">
+  <fecha>2021-09-14</fecha>
+  <productos>
+    <producto>
+      <nombre>Puzzle</nombre>
+      <categoría>Juguetes</categoría> 
+      <precio>13.60</precio>
+      <imagen>http://example.com/images/puzzle.png</imagen>
+    </producto>
+    <producto>
+      <nombre>Muñeco</nombre>
+      <categoría>Juguetes</categoría> 
+      <precio>15.00</precio>
+      <imagen>http://example.com/images/muneco.png</imagen>
+    </producto>
+  </productos>
+</catalogo>
