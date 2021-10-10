@@ -24,7 +24,11 @@
           "nombre": {
             "description": "Nombre del producto",
             "type": "string"
-          }          
+          },
+          "precio": {
+            "description": "Precio del producto",
+            "type": "number"
+          }     
         }
       },
       "minItems": 2,
