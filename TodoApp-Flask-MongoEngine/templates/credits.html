@@ -1,24 +1,22 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>{{t}}</title>
-		<style>
-			body {
-				background-color:white;
-			}
-			.credits {
-				margin:10px;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css"  href="{{ url_for('static',filename='assets/style.css')}}" >
 		</head>
 <body>
-	<a href="/"><h1>{{ h }}</h1></a>
-	<hr>
-	<h3>Credits :</h3>
+	<h1>{{ h }}</h1>
+	<ul>
+		<li><a href="/todos" class="{{ a1 }}">ALL</a></li>
+		<li><a href="/todos/uncompleted" class="{{ a2 }}">Uncompleted</a></li>
+		<li><a href="/todos/completed" class="{{ a3 }}">Completed</a></li>
+		<li style="float:right"><a href="/about" class="active">About</a></li>
+	</ul>
+	<h3>Autor :</h3>
 	<div class='credits'>
-		Prashant Shahi<br>
-		CoolBoi567@gmail.com		
+		Alumno Apellido Apellido<br>
+		correoalumno@alumnos.upm.es
 	</div>
 	<hr>
-	<p>Made with ❤️ from Karnali, Nepal ☕</p>
 </body>
 </html>

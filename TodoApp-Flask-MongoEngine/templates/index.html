@@ -17,24 +17,18 @@
 	  		<strong>Error!</strong> {{ error }}
 		</div>
 	{% endif %}
-	<hr>
 	<div span="right">
-	<form action="/search"	method="GET" >
-		<table class="none" id="close">
-		<tr>
-		<td></td><td></td>
-		<td><big><b>Search Reference:</b></big></td>
-		<td><select name="searchfield" required>
-			<option value="name">Task Name</option>
-			<option value="desc">Description</option>
-			<option value="date">Date</option>
-			<option value="pr">Priority</option>
-		</select></td>
-		<td><input type="text" name="searchvalue" placeholder="Search Task" size="15" /></td>
-		<td><button type="submit">Search</button></td>
-		</tr>
-		</table>
-	</form>
+		<form action="/search"	method="GET" >
+			<big><b>Search Reference:</b></big>
+			<select name="searchfield" required>
+				<option value="name">Task Name</option>
+				<option value="desc">Description</option>
+				<option value="date">Date</option>
+				<option value="pr">Priority</option>
+			</select>
+			<input type="text" name="searchvalue" placeholder="Search Task" size="15" />
+			<button type="submit">Search</button>
+		</form>
 	</div>	
 		{% if searchfield %}
 			<b><big>Search results for field: {{searchfield}} - {{searchvalue}}</big></b>
@@ -43,7 +37,7 @@
 		{% endif %}
 		{% if todos[0] %}
 		<table>
-			<tr id="row">
+			<tr>
 				<th class="status">Status</th>
 				<th class="name">Task Name</th>
 				<th class="desc">Description</th>
@@ -71,43 +65,17 @@
 	{% endif %}
 	<hr/>
 	<form action="/todos" method="POST">
-	<table class="none">
-		<tr class="row success">
-			<td>
-				<h2>Add a Task</h2>
-			</td>
-		</tr>
-		<tr class="row">
-			<td class="col-2">
-				<input type="text" name="name" placeholder="Taskname" />
-			</td>
-		</tr>
-		<tr class="row">
-			<td class="col-4">
-				<textarea name="desc" rows="2" cols="30" placeholder="Enter Description here..." required></textarea>
-			</td>
-		</tr>
-		<tr class="row">
-			<td class="col-2">
-				<input type="date" name="date" placeholder="Date" />
-			</td>
-		</tr>
-		<tr class="row">
-			<td class="col-2">
-				<select name="pr">
-					<option selected disabled>Priority</option>
-					<option>Low !</option>
-					<option>Medium !!</option>
-					<option>High !!!</option>
-				</select>
-			</td>
-		</tr>
-		<tr class="row">
-			<td class="col-2">
-				<button type="submit"> Create </button>
-			</td>
-		</tr>
+		<div><h2>Add a Task</h2></div>
+		<div><input type="text" name="name" placeholder="Taskname" /></div>
+		<div><textarea name="desc" rows="2" cols="30" placeholder="Enter Description here..." required></textarea></div>
+		<div><input type="date" name="date" placeholder="Date" /></div>
+		<div><select name="pr">
+			<option selected disabled>Priority</option>
+			<option>Low !</option>
+			<option>Medium !!</option>
+			<option>High !!!</option>
+		</select></div>
+		<div><button type="submit"> Create </button></div>		
 	</form>
-	</table>
 </body>
 </html>
