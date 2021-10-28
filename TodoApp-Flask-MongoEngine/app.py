@@ -3,7 +3,7 @@ from flask_mongoengine import MongoEngine
 
 app = Flask(__name__)
 title = "TODO with Flask"
-heading = "ToDo Reminder"
+heading = "ToDo Reminder MongoEngine"
 app.config['MONGODB_SETTINGS'] = {
     'host':'mongodb://localhost/todosborrar'
 }

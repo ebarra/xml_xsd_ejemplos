@@ -15,7 +15,7 @@ todos = db.todos
 
 app = Flask(__name__)
 title = "TODO with Flask"
-heading = "ToDo Reminder"
+heading = "ToDo Reminder PyMongo"
 
 def redirect_url():
 	return request.args.get('next') or request.referrer or url_for('index')

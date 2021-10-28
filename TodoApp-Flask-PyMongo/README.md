@@ -19,6 +19,11 @@ Install Python ( If you don't have already )
 Install MongoDB ( Make sure you install it properly )
 	$ sudo apt install -y mongodb
 
+Create virtual environment
+	$ python3 -m virtualenv venv
+
+Install dependecies:
+	$ source venv/bin/activate
 
 Install Dependencies of the application (Flask, Bson and PyMongo)
 	$ pip install -r requirements.txt
