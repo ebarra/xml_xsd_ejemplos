@@ -7,44 +7,55 @@ To-Do-List is mini-project made with Flask and MongoDB
 ```sh
 	Flask : Python Based mini-Webframework
 	MongoDB : Database Server
-	Pymongo : Database Connector ( For creating connectiong between MongoDB and Flask )
+	Mongoengine : Database Connector ( For creating connectiong between MongoDB and Flask )
 	HTML5 (jinja2) : For Form and Table
 ```
 
-## Set up environment for using this repo:
+## Descargar e instalar el código del proyecto
+
+Descarguese y descomprima el código de la carpeta moodle.
+
+Navegue a través de un terminal a la carpeta TodoApp-Flask-MongoEngine.
 ```
-Install Python ( If you don't have already )
-	$ sudo apt-get install python
-
-Install MongoDB ( Make sure you install it properly )
-	$ sudo apt install -y mongodb
-
-
-Create virtual environment
-	$ python3 -m virtualenv venv
-
-Install dependecies:
-	$ source venv/bin/activate
-
-
-Install Dependencies of the application (Flask, Bson and PyMongo)
-	$ pip install -r requirements.txt
+> cd TodoApp-Flask-MongoEngine
 ```
 
-## Run the application
+Una vez dentro de la carpeta, se instalan las dependencias. Para ello debe crear un virtual environment de la siguiente manera:
+
 ```
-Run MongoDB
-1) Start MongoDB
-	$ sudo service mongod start
-2) Stop MongoDB
-	$ sudo service mongod stop
+[LINUX/MAC] > python3 -m venv venv
+[WINDOWS] > py.exe -m venv env
+```
 
-Run the Flask file(app.py)
-	$ python app.py
+Si no tiene instalado venv, Lo puede instalar de la siguiente manera:
 
-Go to http://localhost:5000 with any of browsers and DONE !!
-	$ open http://localhost:5000
+```
+[LINUX/MAC] > python3 -m pip install --user virtualenv
+[WINDOWS] > py.exe -m pip install --user virtualenv
+```
 
-To exit press Ctrl+C
+Una vez creado el virtual environment lo activamos para poder instalar las dependencias:
+
+```
+[LINUX/MAC] > source venv/bin/activate
+[WINDOWS] > .\env\Scripts\activate
+```
+
+Instalamos las dependencias con pip:
+
+```
+> pip3 install -r requirements.txt 
+```
+
+## Ejecutar la aplicación
+
+Debemos tener arrancado MongoDB. Dependiendo de cómo lo hayamos instalado arrancará solo al iniciar la máquina o tendremos que ir a ejecutar el programa "mongod" a la carpeta bin donde hayamos realizado la instalación.
+
+```
+[LINUX/MAC] > python3 app.py
+[WINDOWS] > py.exe app.py
+
+#Go to http://localhost:5000 with any of browsers and DONE !!
+#To exit press Ctrl+C
 ```
 
