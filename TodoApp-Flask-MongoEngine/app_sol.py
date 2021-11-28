@@ -3,6 +3,7 @@ from flask_mongoengine import MongoEngine
 import logging
 from pymongo import monitoring
 from datetime import datetime
+import dateutil
 
 #Logs mongoengine
 log = logging.getLogger()
@@ -40,7 +41,6 @@ app.config['MONGODB_SETTINGS'] = {
 
 db = MongoEngine()
 db.init_app(app)
-
 
 #No hago from model import Todo que da referencia circular
 import model
@@ -91,7 +91,7 @@ def create ():
 	#Adding a Task
 	name=request.values.get("name")
 	desc=request.values.get("desc")
-	date=datetime.fromisoformat(request.values.get("date"))
+	date=dateutil.parser.parse(request.values.get("date"))
 	pr=request.values.get("pr")
 	### TODO: completar llamada a la base de datos
 	new_todo = model.Todo(name=name, desc=desc, date=date, pr=pr)
@@ -120,7 +120,7 @@ def update (todo_id):
 	task = model.Todo.objects.get(id=todo_id)
 	task.name=request.values.get("name")
 	task.desc=request.values.get("desc")
-	task.date=datetime.fromisoformat(request.values.get("date"))
+	task.date=dateutil.parser.parse(request.values.get("date"))
 	task.pr=request.values.get("pr")
 	task.save()
 	return redirect("/")
