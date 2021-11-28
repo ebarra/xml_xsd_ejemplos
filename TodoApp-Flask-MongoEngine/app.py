@@ -2,6 +2,7 @@ from flask import Flask, render_template,request,redirect,url_for
 from flask_mongoengine import MongoEngine
 import logging
 from pymongo import monitoring
+from datetime import datetime
 
 #Logs mongoengine
 log = logging.getLogger()
@@ -40,6 +41,7 @@ app.config['MONGODB_SETTINGS'] = {
 db = MongoEngine()
 db.init_app(app)
 
+
 #No hago from model import Todo que da referencia circular
 import model
 
@@ -52,7 +54,7 @@ def redirect_url():
 def list_all ():
 	#Display all the Tasks
 	### TODO: completar llamada a la base de datos
-	todos_l = None
+	todos_l = model.Todo.objects.all()
 	a1="active"
 	return render_template('index.html',a1=a1,todos=todos_l,t=title,h=heading)
 
@@ -78,10 +80,7 @@ def mark_done (todo_id):
 	#Done-or-not ICON
 	### TODO: completar llamada a la base de datos
 	task = None
-	if(task.done=="yes"):
-		task.done="no"
-	else:
-		task.done="yes"
+	task.done = not(task.done)
 	redir=redirect_url()	# Re-directed URL i.e. PREVIOUS URL from where it came into this one
 	return redirect(redir)
 
@@ -91,7 +90,7 @@ def create ():
 	#Adding a Task
 	name=request.values.get("name")
 	desc=request.values.get("desc")
-	date=request.values.get("date")
+	date=datetime.fromisoformat(request.values.get("date"))
 	pr=request.values.get("pr")
 	### TODO: completar llamada a la base de datos
 	return redirect("/todos")
@@ -101,6 +100,7 @@ def create ():
 def remove (todo_id):
 	#Deleting a Task with various references
 	### TODO: completar llamada a la base de datos
+	task = None
 	return redirect("/")
 
 @app.route("/todos/<todo_id>/update")
@@ -116,7 +116,7 @@ def update (todo_id):
 	task = None
 	task.name=request.values.get("name")
 	task.desc=request.values.get("desc")
-	task.date=request.values.get("date")
+	task.date=datetime.fromisoformat(request.values.get("date"))
 	task.pr=request.values.get("pr")
 	return redirect("/")
 

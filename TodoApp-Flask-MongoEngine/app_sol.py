@@ -2,6 +2,7 @@ from flask import Flask, render_template,request,redirect,url_for
 from flask_mongoengine import MongoEngine
 import logging
 from pymongo import monitoring
+from datetime import datetime
 
 #Logs mongoengine
 log = logging.getLogger()
@@ -29,6 +30,7 @@ class CommandLogger(monitoring.CommandListener):
 
 monitoring.register(CommandLogger())
 
+
 app = Flask(__name__)
 title = "TODO with Flask"
 heading = "ToDo Reminder MongoEngine"
@@ -39,6 +41,8 @@ app.config['MONGODB_SETTINGS'] = {
 db = MongoEngine()
 db.init_app(app)
 
+
+#No hago from model import Todo que da referencia circular
 import model
 
 
@@ -49,6 +53,7 @@ def redirect_url():
 @app.route("/todos")
 def list_all ():
 	#Display all the Tasks
+	### TODO: completar llamada a la base de datos
 	todos_l = model.Todo.objects.all()
 	a1="active"
 	return render_template('index.html',a1=a1,todos=todos_l,t=title,h=heading)
@@ -56,7 +61,8 @@ def list_all ():
 @app.route("/todos/uncompleted")
 def list_uncompleted ():
 	#Display the Uncompleted Tasks
-	todos_l = model.Todo.objects(done="no")
+	### TODO: completar llamada a la base de datos
+	todos_l = model.Todo.objects(done=False)
 	a2="active"
 	return render_template('index.html',a2=a2,todos=todos_l,t=title,h=heading)
 
@@ -64,18 +70,17 @@ def list_uncompleted ():
 @app.route("/todos/completed")
 def list_completed ():
 	#Display the Completed Tasks
-	todos_l = model.Todo.objects(done="yes")
+	### TODO: completar llamada a la base de datos
+	todos_l = model.Todo.objects(done=True)
 	a3="active"
 	return render_template('index.html',a3=a3,todos=todos_l,t=title,h=heading)
 
 @app.route("/todos/<todo_id>/done")
 def mark_done (todo_id):
 	#Done-or-not ICON
-	task=model.Todo.objects.get(id=todo_id)
-	if(task.done=="yes"):
-		task.done="no"
-	else:
-		task.done="yes"
+	### TODO: completar llamada a la base de datos
+	task = model.Todo.objects.get(id=todo_id)
+	task.done = not(task.done)
 	task.save()
 	redir=redirect_url()	# Re-directed URL i.e. PREVIOUS URL from where it came into this one
 	return redirect(redir)
@@ -86,10 +91,10 @@ def create ():
 	#Adding a Task
 	name=request.values.get("name")
 	desc=request.values.get("desc")
-	date=request.values.get("date")
+	date=datetime.fromisoformat(request.values.get("date"))
 	pr=request.values.get("pr")
-		
-	new_todo = model.Todo(name=name, desc=desc, date=date,pr=pr,done="no")
+	### TODO: completar llamada a la base de datos
+	new_todo = model.Todo(name=name, desc=desc, date=date, pr=pr)
 	new_todo.save()
 	return redirect("/todos")
 
@@ -97,22 +102,25 @@ def create ():
 @app.route("/todos/<todo_id>/delete")
 def remove (todo_id):
 	#Deleting a Task with various references
+	### TODO: completar llamada a la base de datos
 	task = model.Todo.objects.get(id=todo_id)
 	task.delete()
 	return redirect("/")
 
 @app.route("/todos/<todo_id>/update")
 def get_update_form (todo_id):
+	### TODO: completar llamada a la base de datos
 	task = model.Todo.objects.get(id=todo_id)
 	return render_template('update.html',task=task,h=heading,t=title)
 
 @app.route("/todos/<todo_id>/update", methods=['POST'])
 def update (todo_id):
 	#Updating a Task with various references
+	### TODO: completar llamada a la base de datos
 	task = model.Todo.objects.get(id=todo_id)
 	task.name=request.values.get("name")
 	task.desc=request.values.get("desc")
-	task.date=request.values.get("date")
+	task.date=datetime.fromisoformat(request.values.get("date"))
 	task.pr=request.values.get("pr")
 	task.save()
 	return redirect("/")
@@ -122,7 +130,8 @@ def update (todo_id):
 def search():
 	searchfield=request.values.get("searchfield")
 	searchvalue=request.values.get("searchvalue")
-	todos_l=model.Todo.objects(__raw__={searchfield:searchvalue})
+	### TODO: completar llamada a la base de datos
+	todos_l = model.Todo.objects(__raw__={searchfield:searchvalue})
 	a1="active"
 	return render_template('index.html',a1=a1,todos=todos_l,searchfield=searchfield,searchvalue=searchvalue,t=title,h=heading)
 
