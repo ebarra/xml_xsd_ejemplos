@@ -3,6 +3,7 @@ from flask_mongoengine import MongoEngine
 import logging
 from pymongo import monitoring
 from datetime import datetime
+import dateutil
 
 #Logs mongoengine
 log = logging.getLogger()
@@ -90,7 +91,7 @@ def create ():
 	#Adding a Task
 	name=request.values.get("name")
 	desc=request.values.get("desc")
-	date=datetime.fromisoformat(request.values.get("date"))
+	date=dateutil.parser.parse(request.values.get("date"))
 	pr=request.values.get("pr")
 	### TODO: completar llamada a la base de datos
 	return redirect("/todos")
@@ -116,7 +117,7 @@ def update (todo_id):
 	task = None
 	task.name=request.values.get("name")
 	task.desc=request.values.get("desc")
-	task.date=datetime.fromisoformat(request.values.get("date"))
+	task.date=dateutil.parser.parse(request.values.get("date"))
 	task.pr=request.values.get("pr")
 	return redirect("/")
 
