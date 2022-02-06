@@ -48,13 +48,13 @@
 			</tr>
 			{% for todo in todos %}
 				<tr class="datas">
-					<td><a href="/todos/{{todo.id}}/done"><input type="image" src="/static/images/{{todo['done']}}.png" alt="Submit ME"></a></td>
+					<td><a href="/todos/{{todo._id}}/done"><input type="image" src="/static/images/{{todo['done']}}.png" alt="Submit ME"></a></td>
 					<td class="name">{{ todo["name"] }}</td>
 					<td class="desc">{{ todo["desc"] }}</td>
 					<td class="date">{{ todo["date"] }}</td>
 					<td class="pr">{{ todo["pr"] }}</td>
-					<td class="func1"><a href="/todos/{{todo.id}}/delete">🗑️</a></td>
-					<td class="func2"><a href="/todos/{{todo.id}}/update">📝</a></td>
+					<td class="func1"><a href="/todos/{{todo._id}}/delete">🗑️</a></td>
+					<td class="func2"><a href="/todos/{{todo._id}}/update">📝</a></td>
 				</tr>
 			{% endfor %}
 		</table>

@@ -7,9 +7,9 @@
 	<h1>{{h}}</h1>
 	<hr>
 	<h3>Update tasks with a reference</h3>
-	<form action="/todos/{{ task.id }}/update" method="POST">
-		Unique Object ID : {{ task.id }}<br/>
-		<input type="text" name="_id" value="{{ task.id }}" hidden>
+	<form action="/todos/{{ task._id }}/update" method="POST">
+		Unique Object ID : {{ task._id }}<br/>
+		<input type="text" name="_id" value="{{ task._id }}" hidden>
 		<table>
 		<tr>
 		<td>Task Name</td><td> : </td><td><input type="text" name="name" value="{{ task['name'] }}" placeholder="{{ task['name'] }}"></td>
