@@ -1,0 +1,38 @@
+{
+  "$id": "https://example.com/banda.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Un schema para validar el catálogo",
+  "type": "object",
+  "required": [ "@id", "fecha", "productos"],
+  "properties": {
+    "@id": {
+      "type": "integer",
+      "description": "Id del catálogo"
+    },
+    "fecha": {
+      "description": "Fecha del catálogo",
+      "type": "string",
+      "format": "date"
+    },
+    "productos": {
+      "description": "Array de productos",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [ "nombre"],
+        "properties": {
+          "nombre": {
+            "description": "Nombre del producto",
+            "type": "string"
+          },
+          "precio": {
+            "description": "Precio del producto",
+            "type": "number"
+          }
+        }
+      },
+      "minItems": 2,
+      "uniqueItems": true
+    }
+  }
+}

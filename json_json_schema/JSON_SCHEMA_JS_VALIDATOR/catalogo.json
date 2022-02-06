@@ -1,0 +1,19 @@
+{
+  "$schema": "./catalogo.schema.json",
+  "@id": 783,
+  "fecha": "2021-09-14",
+  "productos": [
+        {
+           "nombre": "Puzzle",
+           "categoría": "Juguetes",
+           "precio": 13.60,
+           "imagen": "http://example.com/images/puzzle.png"
+        },
+        {
+           "nombre": "Muñeco",
+           "categoría": "Juguetes",
+           "precio": 15.00,
+           "imagen": "http://example.com/images/muneco.png"
+        }
+  ]
+}
