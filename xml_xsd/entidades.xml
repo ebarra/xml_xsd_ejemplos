@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <entidades>
    <!-- tendremos que borrar las primeras lineas que son incorrectas y están mal formadas para que se visualice en firefox o chrome -->
+   <menor_que>a<b</menor_que>
+   <mayor_que>a>b</mayor_que>
+   <comilla_doble>"</comilla_doble>
+   <comilla_simple>'</comilla_simple>
+   <ampersand>&</ampersand>
    <menor_que>a&lt;b</menor_que>
    <mayor_que>a&gt;b</mayor_que>
    <comilla_doble>&quot;</comilla_doble>

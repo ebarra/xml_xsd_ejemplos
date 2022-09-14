@@ -1,7 +1,7 @@
 import jsonschema
 import json
 
-with open('schema-example.json', 'r') as f:
+with open('example.schema.json', 'r') as f:
     schema = json.load(f)
 
 json_obj = {"name": "eggs", "price": 21.47}

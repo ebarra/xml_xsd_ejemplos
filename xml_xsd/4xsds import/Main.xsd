@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- Created with Liquid Studio (http://www.liquid-technologies.com) -->
 <xs:schema xmlns:ord="http://NamespaceTest.com/OrderTypes"
            xmlns:pur="http://NamespaceTest.com/Purchase"
            xmlns:cmn="http://NamespaceTest.com/CommonTypes"
