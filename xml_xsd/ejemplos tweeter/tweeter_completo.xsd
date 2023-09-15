@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://upm.es/xmlns/tweeter"
+           xmlns:tns="http://upm.es/xmlns/tweeter"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+  <xs:element name="tweeter">
+    <xs:complexType>
+        <xs:all>
+          <xs:element name="usuario" type="tns:userInfo"/>
+          <xs:element name="tweets">
+            <xs:complexType>
+                <xs:sequence maxOccurs="10">
+                  <xs:element name="tweet" type="tns:tweetInfo"/>
+                </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:all>
+        <xs:attribute name="id" use="required" >
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:totalDigits value="5"/>
+            </xs:restriction>
+          </xs:simpleType>   
+        </xs:attribute>     
+    </xs:complexType>
+    </xs:element>
+    <xs:complexType name="userInfo">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string" />
+      <xs:element name="apellidos" type="xs:string" />
+      <xs:element name="email">
+          <xs:simpleType>
+              <xs:restriction base="xs:string">
+                  <xs:pattern value=".+@.+"/>
+              </xs:restriction>
+          </xs:simpleType>
+      </xs:element>
+      <xs:element name="fechaNacimiento" type="xs:date" />
+      <xs:element name="ciudad" type="xs:string" />
+      <xs:element name="pais" type="xs:string" />
+      <xs:element name="idiomas">
+        <xs:complexType>
+            <xs:sequence maxOccurs="10">
+              <xs:element name="idioma" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="aficiones">
+        <xs:complexType>
+            <xs:sequence maxOccurs="10">
+              <xs:element name="aficion" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="tweetInfo">
+    <xs:sequence>
+      <xs:element name="texto" type="xs:string" />
+      <xs:element name="fecha" type="xs:date" />
+      <xs:element name="hora" type="xs:time" />
+      <xs:element name="likes" type="xs:integer" />
+      <xs:element name="retweets" type="xs:integer" />
+    </xs:sequence>
+    </xs:complexType>
+</xs:schema>

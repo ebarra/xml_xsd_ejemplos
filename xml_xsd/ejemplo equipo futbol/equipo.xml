@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<equipo xmlns="http://upm.es/xmlns/equipo" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://upm.es/xmlns/equipo equipo.xsd" 
+    id="783">
+    <nombre>Real Madrid</nombre>
+    <ciudad>Madrid</ciudad>
+    <provincia>Madrid</provincia>
+    <pais>España</pais>
+    <estadio>Santiago Bernabeu</estadio>
+    <capacidad>81044</capacidad>
+    <entrenador>Zinedine Zidane</entrenador>
+    <plantilla>
+        <jugador>
+            <nombre>Thibaut</nombre>
+            <apellidos>Courtois</apellidos>
+            <posicion>Portero</posicion>
+            <dorsal>1</dorsal>
+        </jugador>
+        <jugador>
+            <nombre>Daniel</nombre>
+            <apellidos>Carvajal</apellidos>
+            <posicion>Lateral Derecho</posicion>
+            <dorsal>2</dorsal>
+        </jugador>
+        <jugador>
+            <nombre>David</nombre>
+            <apellidos>Alaba</apellidos>
+            <posicion>Lateral Izquierdo</posicion>
+            <dorsal>4</dorsal>
+        </jugador>
+        <jugador>
+            <nombre>Nacho</nombre>
+            <apellidos>Fernández</apellidos>
+            <posicion>Central</posicion>
+            <dorsal>6</dorsal>
+        </jugador>
+        <jugador>
+            <nombre>Lucas</nombre>
+            <apellidos>Vázquez</apellidos>
+            <posicion>Extremo Derecho</posicion>
+            <dorsal>17</dorsal>
+        </jugador>
+        <jugador>
+            <nombre>Luka</nombre>
+            <apellidos>Modric</apellidos>
+            <posicion>Medio Centro</posicion>
+            <dorsal>10</dorsal>
+        </jugador>
+        <jugador>
+            <nombre>Toni</nombre>
+            <apellidos>Kroos</apellidos>
+            <posicion>Medio Centro</posicion>
+            <dorsal>8</dorsal>
+        </jugador>
+        <jugador>
+            <nombre>Vinicius</nombre>
+            <apellidos>Jr</apellidos>
+            <posicion>Extremo Izquierdo</posicion>
+            <dorsal>20</dorsal>
+        </jugador>
+        <jugador>
+            <nombre>Jude</nombre>
+            <apellidos>Bellingham</apellidos>
+            <posicion>Medio Centro</posicion>
+            <dorsal>22</dorsal>
+        </jugador>
+    </plantilla>
+</equipo>

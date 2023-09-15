@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace = 'https://www.w3schools.com'
+xmlns='https://www.w3schools.com'
+elementFormDefault= "qualified">
+
+    <xs:element name='Banda'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Nombre" type='xs:string'/>
+                <xs:element name="Descripcion" type = 'xs:string'/>
+                <xs:element ref='Miembros'/>  <!--Para hacer mas legible el código --> 
+                <xs:element ref='Albums'/>
+                <xs:element ref ='Conciertos'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="Miembros">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name='Miembro'>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Nacionalidad" type="xs:string"/>    
+                            <xs:element name = "Funcion">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value ='Cantante'/>
+                                        <xs:enumeration value ='Guitarrista'/>
+                                        <xs:enumeration value ='Bateria'/>
+                                        <xs:enumeration value ='Bajista'/>
+                                    </xs:restriction>
+                                    
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>        
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--Albums- fecha,nombre - Canciones - Exito --> 
+
+    <xs:element name="Albums">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name= "Fecha">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:pattern value = "[0-9]"/>
+                        <xs:pattern value = '4'/>
+                    </xs:restriction>
+                </xs:simpleType>
+                </xs:element>    
+                <xs:element name='Nombre'>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Canciones">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Exito" type= "xs:boolean"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>        
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <!--Conciertos- gira- Lugar - Exito --> 
+
+    <xs:element name="Conciertos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name='Gira'>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Lugar" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>        
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

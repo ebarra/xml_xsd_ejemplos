@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<band xmlns="https://www.w3schools.com"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="https://www.w3schools.com banda.xsd">
+    <group>Red Hot Chili Peppers</group>
+    <description>American rock band formed in Los Angeles in 1983</description>
+    <members>
+        <member>
+            <mem_name>Anthony Kiedis</mem_name>
+            <instrument>vocalist</instrument>
+        </member>
+        <member>
+            <mem_name>Flea</mem_name>
+            <instrument>bass guitar</instrument>
+        </member>
+        <member>
+            <mem_name>Chad Smith</mem_name>
+            <instrument>drums</instrument>
+        </member>
+        <member>
+            <mem_name>John Frusciante</mem_name>
+            <instrument>guitar</instrument>
+        </member>
+    </members>
+    <albums>
+        <album>
+            <alb_name>Californication</alb_name>
+            <song>Around the world</song>
+            <song>Parallel universe</song>
+            <song>Scar tissue</song>
+        </album>
+        <album>
+            <alb_name>By the way</alb_name>
+            <song>By the way</song>
+            <song>Can't stop</song>
+            <song>The zephyr song</song>
+        </album>
+    </albums>
+    <concerts>
+        <concert>
+            <city>Sevilla</city>
+            <place>Estadio de la Cartuja</place>
+            <date>4/6/22</date>
+        </concert>
+        <concert>
+            <city>Barcelona</city>
+            <place>Estadi Olímpic</place>
+            <date>7/6/22</date>
+        </concert>
+    </concerts>
+</band>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://upm.es/xmlns/equipo"
+           xmlns:tns="http://upm.es/xmlns/equipo"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+  <xs:element name="equipo">
+    <xs:complexType>
+        <xs:all>
+          <xs:element name="nombre" type="xs:string"/>
+          <xs:element name="ciudad" type="xs:string"/>
+          <xs:element name="provincia" type="xs:string"/>
+          <xs:element name="pais" type="xs:string"/>
+          <xs:element name="estadio" type="xs:string"/>
+          <xs:element name="capacidad" type="xs:integer"/>
+          <xs:element name="entrenador" type="xs:string"/>
+          <xs:element name="plantilla">
+            <xs:complexType>
+                <xs:sequence maxOccurs="50">
+                  <xs:element name="jugador" type="tns:jugadorInfo"/>
+                </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:all>
+        <xs:attribute name="id" use="required" >
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:totalDigits value="5"/>
+            </xs:restriction>
+          </xs:simpleType>   
+        </xs:attribute>     
+    </xs:complexType>
+    </xs:element>
+    <xs:complexType name="jugadorInfo">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string" />
+      <xs:element name="apellidos" type="xs:string" />
+      <xs:element name="posicion" type="xs:string" />
+      <xs:element name="dorsal" type="xs:integer" />
+    </xs:sequence>
+    </xs:complexType>
+</xs:schema>

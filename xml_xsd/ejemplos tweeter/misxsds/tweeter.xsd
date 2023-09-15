@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://upm.es/tweeter"
+            xmlns:tns="http://upm.es/tweeter"
+            elementFormDefault="qualified">
+    <xs:element name="tweeter">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="usuario">
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element name="nombre" type="xs:string"/>                            
+                            <xs:element name="fechaNacimiento" type="xs:date"/>
+                            <xs:element name="idiomas">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="idioma" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:all>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="tweets">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="tweet" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element name="texto" type="xs:string"/>
+                                        <xs:element name="likes" type="xs:integer"/>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

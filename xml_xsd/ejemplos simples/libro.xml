@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Libro xmlns="http://www.example.org/Libro"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.example.org/Libro libro.xsd"
+    precio="19.95">
+    <Título>XML y XSD</Título>
+    <Autores>Antonio</Autores>
+    <Editorial>Editorial</Editorial>
+</Libro>

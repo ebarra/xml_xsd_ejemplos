@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tweeter xmlns="http://upm.es/xmlns/tweeter"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://upm.es/xmlns/tweeter tweeter_completo.xsd" 
+         id="783">
+    <usuario>
+        <nombre>Pepe</nombre>
+        <apellidos>Pérez</apellidos>
+        <email>email@upm.es</email>
+        <fechaNacimiento>1990-01-01</fechaNacimiento>
+        <ciudad>Madrid</ciudad>
+        <pais>España</pais>
+        <idiomas>
+            <idioma>español</idioma>
+            <idioma>inglés</idioma>
+        </idiomas>
+        <aficiones>
+            <aficion>deporte</aficion>
+            <aficion>lectura</aficion>
+        </aficiones>
+    </usuario>
+    <tweets>
+        <tweet>
+            <texto>¡Hola, mundo!</texto>
+            <fecha>2021-09-14</fecha>
+            <hora>12:00:00</hora>
+            <likes>0</likes>
+            <retweets>0</retweets>
+        </tweet>
+        <tweet>
+            <texto>¡Adiós, mundo!</texto>
+            <fecha>2021-09-14</fecha>
+            <hora>12:00:01</hora>
+            <likes>0</likes>
+            <retweets>0</retweets>
+        </tweet>
+    </tweets>
+</tweeter>

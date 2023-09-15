@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="https://www.w3schools.com"
+xmlns="https://www.w3schools.com"
+elementFormDefault="qualified">
+  <xs:element name="band">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="group"/>
+        <xs:element type="xs:string" name="description"/>
+        <xs:element name="members">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="member" minOccurs="1" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="mem_name"/>
+                    <xs:element type="xs:string" name="instrument"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="albums">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="album" minOccurs="1" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="alb_name"/>
+                    <xs:element type="xs:string" name="song" minOccurs="1" maxOccurs="unbounded"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="concerts">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="concert" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="city"/>
+                    <xs:element type="xs:string" name="place"/>
+                    <xs:element type="xs:string" name="date"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
+
+
+
+
+<!--He usado la página freeformatter.com como ayuda para hacer este xsd-->

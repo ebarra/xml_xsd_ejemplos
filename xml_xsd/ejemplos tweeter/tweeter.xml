@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tweeter xmlns="http://upm.es/tweeter"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://upm.es/tweeter misxsds/tweeter.xsd"
+        >
+    <usuario>
+        <nombre>Pepe</nombre>        
+        <fechaNacimiento>1990-01-01</fechaNacimiento>
+        <idiomas>
+            <idioma>esp</idioma>
+            <idioma>ing</idioma>
+        </idiomas>
+    </usuario>
+    <tweets>
+        <tweet>
+            <texto>hola</texto>
+            <likes>8</likes>
+        </tweet>
+        <tweet>
+            <texto>bye</texto>
+            <likes>7</likes>
+        </tweet>
+    </tweets>
+</tweeter>
