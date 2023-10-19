@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <equipo xmlns="http://upm.es/xmlns/equipo" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://upm.es/xmlns/equipo equipo.xsd" 
+    xsi:schemaLocation="http://upm.es/xmlns/equipo misxsds/equipo.xsd" 
     id="783">
     <nombre>Real Madrid</nombre>
     <ciudad>Madrid</ciudad>

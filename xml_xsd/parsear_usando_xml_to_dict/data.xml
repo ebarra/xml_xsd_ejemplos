@@ -1,7 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <employees>
 	<employee>
-  		<name>Dave</name>
+  		<name>David España García</name>
         <role>Sale Assistant</role>
         <age>34</age>
+        <coche>true</coche>
     </employee>
 </employees>

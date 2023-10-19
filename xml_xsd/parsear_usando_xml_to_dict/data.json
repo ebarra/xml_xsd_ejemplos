@@ -1,0 +1,10 @@
+{
+    "employees": {
+        "employee": {
+            "name": "David España García",
+            "role": "Sale Assistant",
+            "age": 34,
+            "coche": true
+        }
+    }
+}
