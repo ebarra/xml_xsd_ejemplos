@@ -3,6 +3,9 @@
 Implementado a partir del proyecto: https://github.com/prashant-shahi/ToDo-List-using-Flask-and-MongoDB
 To-Do-List is mini-project made with Flask and MongoDB
 
+ESTA APLICACIÓN LOGUEA TODO LO QUE VA OCURRIENDO PARA PODAMOS VER EN LAS TRAZAS DEL SERVIDOR TODAS LAS INTERACCIONES QUE SE REALIZAN.
+En el fichero app.py tiene el controlador con una serie de TODOs (tareas a realizar) y en el fichero app_sol.py puede ver la solución.
+
 ## Built using :
 ```sh
 	Flask : Python Based mini-Webframework
@@ -59,3 +62,4 @@ Debemos tener arrancado MongoDB. Dependiendo de cómo lo hayamos instalado arran
 #To exit press Ctrl+C
 ```
 
+En el fichero app_sol.py puede encontrar la solución a lo que se pide completar en el fichero app.py
